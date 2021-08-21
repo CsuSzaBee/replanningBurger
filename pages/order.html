@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,84 @@
   <link rel="stylesheet" href="/css/styles.css">
   <title>your Order</title>
 </head>
+
 <body>
-  <h1>This will be the order side</h1>
-  
+  <div id="mainsheet">
+    <h1>Order your fantastic Burger!!</h1>
+    <form action="post">
+      <fieldset>
+        <legend>Personal data</legend>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Your name" required="required">
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" placeholder="example@example.com" required="required">
+        </div>
+        <div>
+          <label for="address">Address:</label>
+          <input type="text" name="address" id="address" placeholder="Delivery address" required="required">
+        </div>
+        <div>
+          <label for="comment">Comment:</label>
+          <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Type your message here..."></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Order</legend>
+        <div>Any Burger: 2€</div>
+        <div class="">
+          Extras:
+        </div>
+        <div class="">
+          <input checked type="radio" name="extra" id="nothing" value="0">
+          <label for="nothing">No extra, please!</label>
+        </div>
+        <div class="">
+          <input type="radio" name="extra" id="cheese" value="0.5">
+          <label for="cheese">Cheese (+ 0.5€)</label>
+        </div>
+        <div class="">
+          <input type="radio" name="extra" id="bacon" value="1">
+          <label for="bacon">Bacon (+ 1€)</label>
+        </div>
+        <div class="">
+          <input type="radio" name="extra" id="double-meat" value="2">
+          <label for="double-meat">Double-meat (+ 2€)</label>
+        </div>
+        <div class="">
+          <input type="radio" name="extra" id="cheese-bacon" value="1.5">
+          <label for="cheese-bacon">Cheese & bacon (+ 1.5€)</label>
+        </div>
+        <div class="">
+          <input type="radio" name="extra" id="cheese-double-meat" value="2.5">
+          <label for="cheese-bacon">Cheese & double meat (+ 2.5€)</label>
+        </div>
+
+        <div>
+          <label for="sauce">Sauce:</label>
+          <select name="sauce" id="sauce">
+            <option value="0" selected>Without sauce</option>
+            <option value="1">Mayo (+ 1€)</option>
+            <option value="1.5">Super hot chili (+ 1.5€)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="quantity">Quantity:</label>
+          <input type="number" name="quantity" id="quantity" min="1" max="10" value="1">
+        </div>
+      </fieldset>
+      <div>
+        <div>Total price: <span id="totalPrice">50</span>€</div>
+        <button onclick="validateForm()" type="button">Submit your order!</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="../js/order.js"></script>
 </body>
+
 </html>
