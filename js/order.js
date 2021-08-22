@@ -1,11 +1,8 @@
-
-let burgerPrice = 2;
-
-function calcOrder() {
+function calcOrder(quantity) {
+  let burger = parseFloat(document.querySelector('#burger').value, 10);
   let extra = parseFloat(document.querySelector('[name=extra]:checked').value, 10);
   let sauce = parseFloat(document.querySelector('#sauce').value, 10);
-  let quantity = parseInt(document.querySelector('#quantity').value, 10);
-  let total = (burgerPrice + extra + sauce) * quantity;
+  let total = (burger + extra + sauce) * quantity;
   document.querySelector('#totalPrice').innerHTML = total;
 }
 
@@ -24,7 +21,7 @@ function validateForm() {
   } else if (quantity < 1 || quantity > 10) {
     alert('Your can only 1 to 10 burgers!');
   } else {
-    calcOrder();
+    calcOrder(quantity);
   }
 }
 

@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/styles.css">
   <title>your Order</title>
 </head>
@@ -12,60 +14,74 @@
 <body>
   <div id="mainsheet">
     <h1>Order your fantastic Burger!!</h1>
+
     <form action="post">
       <fieldset>
         <legend>Personal data</legend>
         <div>
-          <label for="name">Name:</label>
-          <input type="text" name="name" id="name" placeholder="Your name" required="required">
+          <label for="name" class="form-label">Name:</label>
+          <input class="form-control" type="text" name="name" id="name" placeholder="Your name" required="required">
         </div>
         <div>
-          <label for="email">E-mail:</label>
-          <input type="email" name="email" id="email" placeholder="example@example.com" required="required">
+          <label for="email" class="form-label">E-mail:</label>
+          <input class="form-control" type="email" name="email" id="email" placeholder="example@example.com"
+            required="required">
         </div>
         <div>
-          <label for="address">Address:</label>
-          <input type="text" name="address" id="address" placeholder="Delivery address" required="required">
+          <label for="address" class="form-label">Address:</label>
+          <input class="form-control" type="text" name="address" id="address" placeholder="Delivery address"
+            required="required">
         </div>
         <div>
-          <label for="comment">Comment:</label>
-          <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Type your message here..."></textarea>
+          <label for="comment" class="form-label">Comment:</label>
+          <textarea class="form-control" name="comment" id="comment" cols="30" rows="5"
+            placeholder="Type your message here..."></textarea>
         </div>
       </fieldset>
+
       <fieldset>
         <legend>Order</legend>
-        <div>Any Burger: 2€</div>
-        <div class="">
+        <div>
+          <label class="form-label" for="burger">Choose a burger:</label>
+          <select class="form-select" name="burger" id="burger">
+            <option value="2" selected>Classic Burger (2€)</option>
+            <option value="4">Mega Burger (4€)</option>
+            <option value="3">Veggie Burger (1.5€)</option>
+            <option value="3,5">Cheesy Burger (3.5€)</option>
+          </select>
+        </div>
+
+        <div class="form-label">
           Extras:
         </div>
-        <div class="">
-          <input checked type="radio" name="extra" id="nothing" value="0">
-          <label for="nothing">No extra, please!</label>
+        <div class="form-check">
+          <input checked class="form-check-input" type="radio" name="extra" id="nothing" value="0">
+          <label class="form-check-label" for="nothing">No extra, please!</label>
         </div>
-        <div class="">
-          <input type="radio" name="extra" id="cheese" value="0.5">
-          <label for="cheese">Cheese (+ 0.5€)</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="extra" id="cheese" value="0.5">
+          <label class="form-check-label" for="cheese">Cheese (+ 0.5€)</label>
         </div>
-        <div class="">
-          <input type="radio" name="extra" id="bacon" value="1">
-          <label for="bacon">Bacon (+ 1€)</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="extra" id="bacon" value="1">
+          <label class="form-check-label" for="bacon">Bacon (+ 1€)</label>
         </div>
-        <div class="">
-          <input type="radio" name="extra" id="double-meat" value="2">
-          <label for="double-meat">Double-meat (+ 2€)</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="extra" id="double-meat" value="2">
+          <label class="form-check-label" for="double-meat">Double-meat (+ 2€)</label>
         </div>
-        <div class="">
-          <input type="radio" name="extra" id="cheese-bacon" value="1.5">
-          <label for="cheese-bacon">Cheese & bacon (+ 1.5€)</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="extra" id="cheese-bacon" value="1.5">
+          <label class="form-check-label" for="cheese-bacon">Cheese & bacon (+ 1.5€)</label>
         </div>
-        <div class="">
-          <input type="radio" name="extra" id="cheese-double-meat" value="2.5">
-          <label for="cheese-bacon">Cheese & double meat (+ 2.5€)</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="extra" id="cheese-double-meat" value="2.5">
+          <label class="form-check-label" for="cheese-bacon">Cheese & double meat (+ 2.5€)</label>
         </div>
 
         <div>
-          <label for="sauce">Sauce:</label>
-          <select name="sauce" id="sauce">
+          <label class="form-label" for="sauce">Sauce:</label>
+          <select class="form-select" name="sauce" id="sauce">
             <option value="0" selected>Without sauce</option>
             <option value="1">Mayo (+ 1€)</option>
             <option value="1.5">Super hot chili (+ 1.5€)</option>
@@ -73,13 +89,14 @@
         </div>
 
         <div>
-          <label for="quantity">Quantity:</label>
-          <input type="number" name="quantity" id="quantity" min="1" max="10" value="1">
+          <label class="form-label" for="quantity">Quantity:</label>
+          <input class="form-control" type="number" name="quantity" id="quantity" min="1" max="10" value="1">
         </div>
       </fieldset>
+      
       <div>
-        <div>Total price: <span id="totalPrice">50</span>€</div>
-        <button onclick="validateForm()" type="button">Submit your order!</button>
+        <div>Total price: <span id="totalPrice">0</span>€</div>
+        <button class="btn btn-primary" onclick="validateForm()" type="button">Submit your order!</button>
       </div>
 
     </form>
