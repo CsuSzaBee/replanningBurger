@@ -6,11 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>replanning Burger</title>
+  <title>Welcome to replanning Burger</title>
 </head>
 
 <body>
   <div id="mainsheet">
+    <header>
+      <div class="weather">
+        <div class="weekday">
+          <h4>Weather</h4>
+          <div id="temperature">
+            <p><span id="tempdata">0</span> &deg;C</p>
+          </div>
+          <select class="form-select" name="weekdays" id="weekdays">
+            <option value="0" selected>Monday</option>
+            <option value="1">Tuesday</option>
+            <option value="2">Wednesday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Friday</option>
+            <option value="5">Saturday</option>
+            <option value="6">Sunday</option>
+          </select>
+          <button onclick="showTemp()" type="button">Show!</button>
+          <div >
+            <p id="dailyoffer"></p>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <!--Navigation bar-->
     <nav>
       <a href="/index.html">Home</a>
@@ -44,6 +68,8 @@
       <img src="/img/map.jpg" alt="map with the location of replanningBurger">
     </main>
   </div>
+
+  <script src="/js/weatherwidget.js"></script>
 </body>
 
 </html>

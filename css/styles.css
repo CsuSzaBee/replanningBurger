@@ -15,8 +15,9 @@ body {
   padding: 1rem;
 }
 
-nav, main {
-  margin: 1rem;
+nav {
+  margin: auto;
+  display: flex;
 }
 
 main {
@@ -108,9 +109,33 @@ tbody tr:nth-of-type(2n) {
   width: 20%;
 }
 
-.offerCard h3 {
-  
+/* weatherwidget styles */
+
+.weather {
+  background-color: rgb(110, 48, 19);
+  border-radius: 2px;
+  text-align: center;
+  color: rgb(255, 208, 0);
+  width: 100%;
+  margin: auto;
 }
 
+header select {
+  background-color: rgb(255, 208, 0);
+  color: rgb(110, 48, 19);
+  border: none;
+}
+
+header button {
+  background-color: rgb(255, 208, 0);
+  color: rgb(110, 48, 19);
+  border: none;
+  border-radius: 2px;
+ }
+
+header h4 {
+  text-transform: uppercase;
+  text-align: left;
+}
 
 
