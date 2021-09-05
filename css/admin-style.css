@@ -1,0 +1,14 @@
+body {
+  background-color: lavender;
+}
+
+.container {
+  background-color: lightskyblue;
+  margin-top: 20px;
+}
+
+.container h2 {
+  color: blue;
+  text-align: center;
+}
+
