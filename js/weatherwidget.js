@@ -1,4 +1,4 @@
-let temperatures = [-1, 13.8, 20, 35.7, 5, 26, 10];
+let temperatures = [-1, 13.8, 20, 35.7, 5, 26, -10];
 let tempUpperLimits = [0, 15, 20, 25, 60]
 let offers = [
   "Try our super hot hot-chocolate!",
@@ -20,6 +20,33 @@ function showTemp() {
   }
 }
 
+function calcMinTemp(arr) {
+  let minTemp = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    minTemp = minTemp > arr[i] ? arr[i] : minTemp;
+  }
+  return minTemp
+}
+
+function calcMaxTemp(arr) {
+  let maxTemp = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    maxTemp = maxTemp < arr[i] ? arr[i] : maxTemp;
+  }
+  return maxTemp
+}
+
+function calcAvgTemp(arr) {
+  let total = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total/arr.length;
+}
+
+
 showTemp();
 
-
+console.log(calcMinTemp(temperatures));
+console.log(calcMaxTemp(temperatures));
+console.log(calcAvgTemp(temperatures));
