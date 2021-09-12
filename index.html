@@ -5,42 +5,79 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/styles.css">
   <title>Welcome to replanning Burger</title>
 </head>
 
 <body>
-  <div id="mainsheet">
+  <div id="mainsheet" class="container">
     <header>
       <div class="weather">
-        <div class="weekday">
-          <h4>Weather</h4>
-          <div id="temperature">
-            <p><span id="tempdata">0</span> &deg;C</p>
+        <div class="row">
+          <div class="col-lg-10">
+            <h4>Our Offer by the Weather of the Day</h4>
           </div>
-          <select class="form-select" name="weekdays" id="weekdays">
-            <option value="0" selected>Monday</option>
-            <option value="1">Tuesday</option>
-            <option value="2">Wednesday</option>
-            <option value="3">Thursday</option>
-            <option value="4">Friday</option>
-            <option value="5">Saturday</option>
-            <option value="6">Sunday</option>
-          </select>
-          <button onclick="showTemp()" type="button">Show!</button>
-          <div >
+          <div class="col-lg-2" id="temperature">
+            <p><span id="dayTempDisplay">0</span> &deg;C</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <p style="display: inline;">Choose the day:</p>
+            <select name="weekdays" id="weekdays">
+              <option value="0" selected>Monday</option>
+              <option value="1">Tuesday</option>
+              <option value="2">Wednesday</option>
+              <option value="3">Thursday</option>
+              <option value="4">Friday</option>
+              <option value="5">Saturday</option>
+              <option value="6">Sunday</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <button onclick="showTemp()" type="button">Show!</button>
+          </div>
+          <div class="col-md-4">
             <p id="dailyoffer"></p>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <p>Minimal temp: <span id="minTempDisplay">0</span> &deg;C</p>
+          </div>
+          <div class="col-md-4">
+            <p>Average temp: <span id="avgTempDisplay">0</span> &deg;C</p>
+          </div>
+          <div class="col-md-4">
+            <p>Maximal temp: <span id="maxTempDisplay">0</span> &deg;C</p>
+          </div>
+        </div>
+
       </div>
     </header>
 
     <!--Navigation bar-->
     <nav>
-      <a href="/index.html">Home</a>
-      <a href="/pages/menu.html">Menu</a>
-      <a href="/pages/specials.html">Special Offers</a>
-      <a href="/pages/order.html" target="_blank" rel="noopener noreferrer">Order</a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <a href="/index.html">Home</a>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <a href="/pages/menu.html">Menu</a>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <a href="/pages/specials.html">Special Offers</a>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <a href="/pages/order.html" target="_blank" rel="noopener noreferrer">Order</a>
+          </div>
+        </div>
+      </div>
     </nav>
     <!--Main content-->
     <main>

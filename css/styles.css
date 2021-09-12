@@ -9,15 +9,8 @@ body {
 
 #mainsheet {
   background-color: seashell;
-  width: 85%;
-  margin: auto;
   box-shadow: 2px 2px 4px #383737c0;
   padding: 1rem;
-}
-
-nav {
-  margin: auto;
-  display: flex;
 }
 
 main {
@@ -33,16 +26,26 @@ h1 {
   color: rgb(100, 22, 39);
 }
 
+img {
+  width: 80%;
+}
+
+/* navbar styles*/
+
+nav div.container {
+  padding: 0;
+}
+
 nav a{
   background-color: rgb(110, 48, 19);
   padding: 15px;
-  border-radius: 2px;
+  border-radius: 4px;
   text-align: center;
   color: rgb(255, 208, 0);
   text-decoration: none;
   display: inline-block;
-  width: 20%;
-  margin: auto;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 
@@ -54,11 +57,6 @@ nav a:hover {
 
 nav a:visited {
   box-shadow: 2px 2px 3px rgb(255, 208, 0);
-}
-
-
-img {
-  width: 80%;
 }
 
 /* menu tables styles*/
@@ -113,17 +111,17 @@ tbody tr:nth-of-type(2n) {
 
 .weather {
   background-color: rgb(110, 48, 19);
-  border-radius: 2px;
-  text-align: center;
+  border-radius:4px;
   color: rgb(255, 208, 0);
-  width: 100%;
-  margin: auto;
+  text-align: center;
+  padding: 1rem;
 }
 
 header select {
   background-color: rgb(255, 208, 0);
   color: rgb(110, 48, 19);
   border: none;
+  display: inline;
 }
 
 header button {

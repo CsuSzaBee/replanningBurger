@@ -5,25 +5,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>replanningBurger - Menu</title>
 </head>
 
 <body>
-  <div id="mainsheet">
+  <div id="mainsheet" class="container">
 
     <!--Navigation bar-->
     <nav>
-      <a href="/index.html">Home</a>
-      <a href="/pages/menu.html">Menu</a>
-      <a href="/pages/specials.html">Special Offers</a>
-      <a href="/pages/order.html "target="_blank" rel="noopener noreferrer">Order</a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <a href="/index.html">Home</a>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <a href="/pages/menu.html">Menu</a>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <a href="/pages/specials.html">Special Offers</a>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <a href="/pages/order.html" target="_blank" rel="noopener noreferrer">Order</a>
+          </div>
+        </div>
+      </div>
     </nav>
     <!--Main content-->
     <main>
       <h1>Food & Drinkz</h1>
-      <table>
+      <table class="table">
         <thead>
           <th><i class="fas fa-hamburger"></i></th>
           <th>Foods</th>

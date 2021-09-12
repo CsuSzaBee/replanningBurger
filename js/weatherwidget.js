@@ -11,7 +11,7 @@ let offers = [
 
 function showTemp() {
   let day = parseInt(document.querySelector("#weekdays").value, 10);
-  document.querySelector("#tempdata").innerHTML = temperatures[day];
+  document.querySelector("#dayTempDisplay").innerHTML = temperatures[day];
   for (let i = 0; i < tempUpperLimits.length; i++) {
     if (temperatures[day] <= tempUpperLimits[i]) {
       document.querySelector("#dailyoffer").innerHTML = offers[i];
@@ -41,12 +41,14 @@ function calcAvgTemp(arr) {
   for (let i = 1; i < arr.length; i++) {
     total += arr[i];
   }
-  return total/arr.length;
+  return (total/arr.length).toFixed(2);
 }
 
 
 showTemp();
 
-console.log(calcMinTemp(temperatures));
-console.log(calcMaxTemp(temperatures));
-console.log(calcAvgTemp(temperatures));
+if (temperatures) {
+  document.querySelector("#minTempDisplay").innerHTML = calcMinTemp(temperatures);
+  document.querySelector("#maxTempDisplay").innerHTML = calcMaxTemp(temperatures);
+  document.querySelector("#avgTempDisplay").innerHTML = calcAvgTemp(temperatures);
+}
